@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartStudy AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+
+            <h1>🎓 SmartStudy AI</h1>
+
+            <p class="subtitle">
+                Your Personal AI Study Assistant
+            </p>
+
+        </div>
+
+
+        <!-- UPLOAD SECTION -->
+        <div class="upload-box">
+
+            <h2>📚 Upload Your Question</h2>
+
+            <div class="file-area">
+
+                <p>
+                    📷 Upload an image or 📄 PDF containing your question
+                </p>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                    onchange="showFileName()"
+                >
+
+                <p id="fileName">
+                    No file selected
+                </p>
+
+            </div>
+
+
+            <button
+                id="solveButton"
+                onclick="generateSummary()"
+            >
+                ✨ Solve Question
+            </button>
+
+
+            <button
+                id="clearButton"
+                onclick="clearAll()"
+                class="clear-button"
+            >
+                🗑️ Clear
+            </button>
+
+
+            <!-- LOADING -->
+            <div id="loading" class="loading">
+
+                <div class="spinner"></div>
+
+                <p>
+                    🤖 AI is solving your question...
+                </p>
+
+                <div class="dots">
+                    <span>●</span>
+                    <span>●</span>
+                    <span>●</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULT SECTION -->
+        <div class="result-box">
+
+            <h2>🤖 AI Solution</h2>
+
+            <p id="summary">
+                Upload a question and click
+                "Solve Question".
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <div class="footer">
+
+            SmartStudy AI • Learn Smarter, Solve Better 🚀
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
